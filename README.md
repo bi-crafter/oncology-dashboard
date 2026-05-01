@@ -2,11 +2,14 @@
 
 A comprehensive Power BI analytics solution for oncology metrics tracking and business intelligence. This enterprise-grade dashboard demonstrates advanced data modeling, DAX optimization, and responsive visualization design.
 
-## 📊 Dashboard Preview
-
-![Oncology & Medical Performance Dashboard](./assets/dashboard-screenshot.png)
-
-> **The Global Benchmark Dashboard** - Real-time oncology and medical performance analytics with geographic insights, survival metrics, drug efficacy analysis, and treatment failure tracking.
+### 🎯 The Global Benchmark Dashboard
+Real-time oncology and medical performance analytics featuring:
+- **Response Rate Analytics** - Tracking treatment response by year and age groups
+- **Survival Metrics** - Average survival months by cancer stage with detailed breakdowns
+- **Drug Efficacy Analysis** - Comparing medicine effectiveness (Cisplatin, Nivolumab, Paclitaxel, Pembrolizumab)
+- **Geospatial Intelligence** - Global efficiency heatmaps across countries
+- **Failure Treatment Analysis** - Treatment failure rates by country and drug type
+- **Interactive Filtering** - Country-level drill-down capabilities
 
 ## 📊 Project Overview
 

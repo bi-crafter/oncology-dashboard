@@ -1,0 +1,172 @@
+table Gold_Oncology_Dashboard_Source
+	lineageTag: 393bdc74-56be-428e-bc71-453310158680
+	sourceLineageTag: 2453cefe-837b-46a5-b446-f7c23f89766a
+
+	measure Toxicity = AVERAGE(Gold_Oncology_Dashboard_Source[Side_Effects_Score])
+		lineageTag: d97e1d87-b75d-4309-b4bf-492fc888e889
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 50c8821f-cd28-4b72-9a05-ff1c3c9d80fd
+		sourceLineageTag: 9e9d7519-5cc4-4610-a6b1-f423834df310
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column Country
+		dataType: string
+		lineageTag: f5acfa10-5e68-4c74-bdbe-ebb066f4dcbe
+		sourceLineageTag: 1a813fd5-1cfd-430a-a774-84cb2c6dc615
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = User
+
+	column Age
+		dataType: int64
+		formatString: 0
+		lineageTag: ba653d43-8f92-45de-b08e-272edc290216
+		sourceLineageTag: ed14979a-c545-4cf4-b3a4-1ae976fec0e8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = User
+
+	column Cancer_Type
+		dataType: string
+		lineageTag: 6411720a-6dcc-438a-a8d2-13f5504a04e3
+		sourceLineageTag: fa530bf5-95a5-4557-8b06-2ac32850012a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Cancer_Type
+
+		annotation SummarizationSetBy = User
+
+	column Stage
+		dataType: string
+		lineageTag: 14b43dfd-0809-40d3-a855-89fe906597fa
+		sourceLineageTag: 74632652-6693-4f78-85a4-2a0fce5c8b62
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Stage
+
+		annotation SummarizationSetBy = User
+
+	column Drug_Name
+		dataType: string
+		lineageTag: 3181d44c-175a-49d9-a5e2-37361a90ac5a
+		sourceLineageTag: da1c0bdd-73d0-4a82-b456-74dd306af828
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Drug_Name
+
+		annotation SummarizationSetBy = User
+
+	column Survival_Months
+		dataType: double
+		lineageTag: b93d72f8-af39-448d-9e13-f8f6a0afad1e
+		sourceLineageTag: 1e6f0220-6d46-4f3c-871b-94b132bb912f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Survival_Months
+
+		annotation SummarizationSetBy = User
+
+	column Response
+		dataType: string
+		lineageTag: 8cd6fcfe-c530-4c1d-b89c-e83b3034ab43
+		sourceLineageTag: e365f3bf-3847-4e52-8341-bd635817a90d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Response
+
+		annotation SummarizationSetBy = User
+
+	column Response_Score
+		dataType: double
+		lineageTag: 4afb087d-a5a6-4339-a5f1-0ba69b9719a8
+		sourceLineageTag: 36c34c1d-634c-4bb2-96c8-3d35694a7b7a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Response_Score
+
+		annotation SummarizationSetBy = User
+
+	column Failure_Flag
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c222a8a-8817-46cd-b4b5-14c57496a253
+		sourceLineageTag: 61ec74fe-f2bd-42d0-ac02-088042c0aec3
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Failure_Flag
+
+		annotation SummarizationSetBy = User
+
+	column Side_Effects_Score
+		dataType: int64
+		formatString: 0
+		lineageTag: a0e97805-24fb-41bf-86d9-bccf8e25a827
+		sourceLineageTag: d43d89b9-1c2e-45dd-9d65-4c5d48d38a1a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Side_Effects_Score
+
+		annotation SummarizationSetBy = User
+
+	column Age_Group
+		dataType: string
+		lineageTag: 2519f4b4-e93d-4bed-a1d6-b1c0ed95865b
+		sourceLineageTag: 9d320cdd-b595-499c-a178-73e6f9715701
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Age_Group
+
+		annotation SummarizationSetBy = User
+
+	column Stage_Rank
+		dataType: int64
+		formatString: 0
+		lineageTag: 3871bd31-0185-4807-b66d-c47cedb3e132
+		sourceLineageTag: bab87742-5247-40b5-a286-dc74c7405dcd
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Stage_Rank
+
+		annotation SummarizationSetBy = User
+
+	column Clinical_Success_Index
+		dataType: double
+		lineageTag: 8aa8fc31-643e-4b14-a342-c4b61a16690e
+		sourceLineageTag: 557d4f13-105b-4cac-ac78-18c0e788c147
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Clinical_Success_Index
+
+		annotation SummarizationSetBy = User
+
+	column LinkKey
+		dataType: string
+		lineageTag: 8c53b7c4-6b3e-41eb-83e5-370f71d0c8a6
+		sourceLineageTag: f1d2b3c0-5d95-420e-a5cb-e322d534d6f9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: LinkKey
+
+		annotation SummarizationSetBy = User
+
+	partition Gold_Oncology_Dashboard_Source = entity
+		mode: directQuery
+		source
+			entityName: Gold_Oncology_Dashboard_Source
+			expressionSource: 'DirectQuery to AS - Oncology_Gold_Model_N'
+
+	annotation PBI_ResultType = Exception
+

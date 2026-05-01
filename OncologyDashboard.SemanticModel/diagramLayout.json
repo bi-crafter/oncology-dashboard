@@ -1,0 +1,74 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 780.80048596445317,
+            "y": 0
+          },
+          "nodeIndex": "Gold_Medicine_Metrics_Source",
+          "nodeLineageTag": "75206ea5-2d6f-4c4d-ae3e-352e247de89a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 116.72077905552374
+          },
+          "nodeIndex": "Gold_Oncology_Dashboard_Source",
+          "nodeLineageTag": "2453cefe-837b-46a5-b446-f7c23f89766a",
+          "size": {
+            "height": 300,
+            "width": 201.71300448430497
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 418.80925785040546,
+            "y": 233.44566811437858
+          },
+          "nodeIndex": "Calendar",
+          "nodeLineageTag": "f661d3f9-4709-45ee-94f3-e8c0476fd7e9",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1536.1862770829548,
+            "y": 247.08322358495116
+          },
+          "nodeIndex": "Calendar new",
+          "nodeLineageTag": "f69ad452-ebe9-458c-a956-b22c5e6fb049",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 62.724535832360914,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

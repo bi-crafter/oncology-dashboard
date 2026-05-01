@@ -1,0 +1,190 @@
+table Gold_Medicine_Metrics_Source
+	lineageTag: 75206ea5-2d6f-4c4d-ae3e-352e247de89a
+	sourceLineageTag: 87aa5ad8-0232-475f-abab-6eba33bc9803
+
+	measure 'Avg Survival' = AVERAGE(Gold_Oncology_Dashboard_Source[Survival_Months])
+		lineageTag: 760806bd-14d1-42ec-91b1-8a876788abce
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Response Rate' = DIVIDE(SUM(Gold_Oncology_Dashboard_Source[Response_Score]), COUNTROWS(Gold_Oncology_Dashboard_Source))
+		lineageTag: 80af7b11-3263-410b-87ea-242a2691668d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Efficiency Variance' =
+			
+			VAR RealWorldPerformance = [Response Rate]
+			VAR GlobalTrialBenchmark = [Medicine Efficacy Index]
+			
+			RETURN
+			IF(
+			    ISBLANK(RealWorldPerformance) || ISBLANK(GlobalTrialBenchmark),
+			    BLANK(),
+			    RealWorldPerformance - GlobalTrialBenchmark
+			)
+		lineageTag: 6460dd57-a1e6-4776-9c49-3726a573c650
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Medicine Efficacy Index' =
+			
+			AVERAGE('Gold_Medicine_Metrics_Source'[Medicine_Performance_Score])
+		lineageTag: 8455cc9a-9d60-4918-af59-0bfa8214ad0f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Efficiency vs Benchmark' = ```
+			
+			VAR CurrentPerf = [Response Rate]
+			VAR GlobalTarget = AVERAGE(Gold_Medicine_Metrics_Source[Response_Rate])
+			RETURN 
+			DIVIDE(CurrentPerf - GlobalTarget, GlobalTarget)
+			```
+		lineageTag: c7503c15-b2e3-4d4c-b618-edb63a7b3d71
+
+		changedProperty = Name
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Drug_Name
+		dataType: string
+		lineageTag: e82378c2-dd5e-4c25-ba35-cd995281d9a9
+		sourceLineageTag: 4542873d-06de-4a69-8ffd-76aae92fe42e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Drug_Name
+
+		annotation SummarizationSetBy = User
+
+	column Cancer_Type
+		dataType: string
+		lineageTag: 612ac3ad-e30e-41d1-8229-24c7b40cc2f6
+		sourceLineageTag: 8fb2095d-cfad-415f-88a1-fd3b80eefa27
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Cancer_Type
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 9cda9eaa-b8de-4b34-a813-0ff8571172ae
+		sourceLineageTag: 88c88bb8-6a85-4255-8e59-0ad2cce8a61c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column Avg_Survival
+		dataType: double
+		lineageTag: 0c0d07e1-1d84-4ec3-a771-02c2942bfa6a
+		sourceLineageTag: 331754bc-e1e6-4419-9e47-33d7f75fcb5d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Avg_Survival
+
+		annotation SummarizationSetBy = User
+
+	column Response_Rate
+		dataType: double
+		lineageTag: d76fadb9-63a8-40b8-9077-37f59b0c3f54
+		sourceLineageTag: fb86beec-88fe-439f-81eb-3a7ce3417f54
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Response_Rate
+
+		annotation SummarizationSetBy = User
+
+	column Failure_Rate
+		dataType: double
+		lineageTag: 324acf55-c407-4351-bf60-e547001afff1
+		sourceLineageTag: 837fe727-1dbf-4bff-9e7c-c7a67c6b2ab0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Failure_Rate
+
+		annotation SummarizationSetBy = User
+
+	column Side_Effects
+		dataType: double
+		lineageTag: 27f21691-238a-4332-9afb-08f8867ab20b
+		sourceLineageTag: 65b06a38-3935-4975-a417-49f4e6abf3f4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Side_Effects
+
+		annotation SummarizationSetBy = User
+
+	column Survival_N
+		dataType: double
+		lineageTag: c25d7466-3181-41a8-b51e-e3fc50f78cc2
+		sourceLineageTag: fe9a661a-1d0b-4412-98cc-60eefedd729b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Survival_N
+
+		annotation SummarizationSetBy = User
+
+	column Response_N
+		dataType: double
+		lineageTag: a9d2dcdd-4ce5-498f-a487-9e9163a3ce4f
+		sourceLineageTag: 89eca886-0b83-46c6-9ae4-f81b2fd7f690
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Response_N
+
+		annotation SummarizationSetBy = User
+
+	column Failure_N
+		dataType: double
+		lineageTag: e79c0d2a-c437-466c-8cac-761bdac04c48
+		sourceLineageTag: 179b077f-9de7-4623-8a51-8125c36cda03
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Failure_N
+
+		annotation SummarizationSetBy = User
+
+	column Side_N
+		dataType: double
+		lineageTag: 430a89e8-4fb0-4875-88e9-69f591ec506c
+		sourceLineageTag: 0c7e515e-ccd6-4bff-a21e-f9a785c438ce
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Side_N
+
+		annotation SummarizationSetBy = User
+
+	column Medicine_Performance_Score
+		dataType: double
+		lineageTag: 285b4f94-025c-4010-9f47-c12201847804
+		sourceLineageTag: 2fbf7fb3-4bfe-4c97-adfa-1811407957f1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Medicine_Performance_Score
+
+		annotation SummarizationSetBy = User
+
+	column LinkKey
+		dataType: string
+		isNullable: false
+		lineageTag: a924ce5b-6e42-428b-8f83-9102c8e426c4
+		sourceLineageTag: eb9de751-ab6d-44ac-87d5-b44600318abd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: LinkKey
+
+		annotation SummarizationSetBy = User
+
+	partition Gold_Medicine_Metrics_Source = entity
+		mode: directQuery
+		source
+			entityName: Gold_Medicine_Metrics_Source
+			expressionSource: 'DirectQuery to AS - Oncology_Gold_Model_N'
+
+	annotation PBI_ResultType = Exception
+

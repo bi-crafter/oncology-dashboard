@@ -1,0 +1,229 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "f4d3492e30356da54a29",
+  "position": {
+    "x": 718.9742893969202,
+    "y": 459.51835017977072,
+    "z": 5000,
+    "height": 248.51502611763109,
+    "width": 548.608642561563,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "esriVisual",
+    "query": {
+      "queryState": {
+        "Color": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Gold_Medicine_Metrics_Source"
+                    }
+                  },
+                  "Property": "Efficiency Variance"
+                }
+              },
+              "queryRef": "Gold_Medicine_Metrics_Source.Efficiency Variance",
+              "nativeQueryRef": "Efficiency Variance"
+            }
+          ]
+        },
+        "Location": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Gold_Oncology_Dashboard_Source"
+                    }
+                  },
+                  "Property": "Country"
+                }
+              },
+              "queryRef": "Gold_Oncology_Dashboard_Source.Country",
+              "nativeQueryRef": "Country"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Gold_Medicine_Metrics_Source"
+                  }
+                },
+                "Property": "Efficiency Variance"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "mapTools": [
+        {
+          "properties": {
+            "basemaps": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "share": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "mapObject": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"portalUrl\":\"https://www.arcgis.com\",\"version\":\"2.4\",\"isAuthorNamedUser\":false,\"map\":{\"webmap\":{\"is3d\":false,\"itemData\":{\"operationalLayers\":[{\"id\":\"MyLayer\",\"visibility\":true,\"opacity\":1,\"minScale\":0,\"maxScale\":0,\"refreshInterval\":0,\"title\":\"Country\",\"objectIdField\":\"objectId\",\"type\":\"DataLayer\",\"layerType\":\"ArcGISFeatureLayer\",\"popupEnabled\":true,\"disablePopup\":false,\"visible\":true,\"geometryType\":\"polygon\",\"source\":[{\"attributes\":{},\"geometry\":{\"rings\":[],\"type\":\"polygon\",\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100}}}],\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100},\"esriMaps\":{\"isTimeEnabled\":\"false\",\"clusterInfo\":null,\"lastShareInfo\":null},\"timeInfo\":null,\"showLabels\":false,\"featureCollection\":{\"layers\":[{\"popupInfo\":{\"popupElements\":[{\"type\":\"fields\",\"fieldInfos\":[{\"fieldName\":\"Gold_Medicine_Metrics_Source_Efficiency_20Variance\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Efficiency Variance\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Gold_Oncology_Dashboard_Source_Country\",\"isEditable\":true,\"label\":\"Country\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":true,\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}]}],\"expressionInfos\":[],\"fieldInfos\":[{\"fieldName\":\"Gold_Medicine_Metrics_Source_Efficiency_20Variance\",\"format\":{\"digitSeparator\":true,\"places\":2},\"isEditable\":true,\"label\":\"Efficiency Variance\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Gold_Oncology_Dashboard_Source_Country\",\"isEditable\":true,\"label\":\"Country\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":true,\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}],\"title\":\"\",\"actions\":[]},\"effect\":null,\"layerDefinition\":{\"objectIdField\":\"objectId\",\"fields\":[{\"alias\":\"objectId\",\"editable\":false,\"name\":\"objectId\",\"nullable\":false,\"type\":\"esriFieldTypeOID\"},{\"alias\":\"Efficiency Variance\",\"editable\":true,\"name\":\"Gold_Medicine_Metrics_Source_Efficiency_20Variance\",\"nullable\":true,\"type\":\"esriFieldTypeDouble\"},{\"alias\":\"Country\",\"editable\":true,\"length\":-1,\"name\":\"Gold_Oncology_Dashboard_Source_Country\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"ROW_ID\",\"editable\":true,\"name\":\"ROW_ID\",\"nullable\":true,\"type\":\"esriFieldTypeInteger\"}],\"geometryType\":\"polygon\",\"drawingInfo\":{\"renderer\":{\"authoringInfo\":{\"classificationMethod\":\"esriClassifyNaturalBreaks\",\"type\":\"classedColor\"},\"type\":\"classBreaks\",\"visualVariables\":[],\"classBreakInfos\":[{\"classMaxValue\":0.411237,\"symbol\":{\"type\":\"esriSFS\",\"color\":[88,44,14,255],\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"},\"style\":\"esriSFSSolid\"}},{\"classMaxValue\":0.475423,\"symbol\":{\"type\":\"esriSFS\",\"color\":[145,69,5,255],\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"},\"style\":\"esriSFSSolid\"}},{\"classMaxValue\":0.479161,\"symbol\":{\"type\":\"esriSFS\",\"color\":[200,87,0,255],\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"},\"style\":\"esriSFSSolid\"}},{\"classMaxValue\":0.480248,\"symbol\":{\"type\":\"esriSFS\",\"color\":[255,110,0,255],\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"},\"style\":\"esriSFSSolid\"}},{\"classMaxValue\":0.4841613776181084,\"symbol\":{\"type\":\"esriSFS\",\"color\":[255,162,0,255],\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"},\"style\":\"esriSFSSolid\"}}],\"defaultLabel\":\"Other\",\"defaultSymbol\":{\"type\":\"esriSFS\",\"color\":[170,170,170,255],\"outline\":{\"type\":\"esriSLS\",\"color\":[153,153,153,64],\"width\":0.375,\"style\":\"esriSLSSolid\"},\"style\":\"esriSFSSolid\"},\"field\":\"Gold_Medicine_Metrics_Source_Efficiency_20Variance\",\"minValue\":0.4112368493162216},\"transparency\":0},\"featureReduction\":null,\"locationProvider\":{\"type\":\"cachedstdgeo\",\"adminLevel\":\"countries\",\"targetSR\":{\"latestWkid\":3857,\"wkid\":102100},\"useExactMatch\":false,\"sourceCountry\":\"world\",\"geographyLevel\":\"countries\",\"lookupFields\":[{\"lookupField\":\"Location\",\"outField\":\"Gold_Oncology_Dashboard_Source_Country\"}]},\"minScale\":0,\"maxScale\":0,\"definitionExpression\":null,\"templates\":[{\"name\":\"New Feature\",\"description\":\"\",\"prototype\":{\"attributes\":{\"Gold_Medicine_Metrics_Source_Efficiency_20Variance\":null,\"Gold_Oncology_Dashboard_Source_Country\":null,\"ROW_ID\":null}}}],\"elevationInfo\":null,\"name\":\"Country\",\"type\":\"DataLayer\",\"queryParameters\":{\"tableId\":\"\"}},\"featureSet\":{\"features\":[{\"attributes\":{},\"geometry\":{\"rings\":[],\"type\":\"polygon\",\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100}}}]}}]}}],\"tables\":[],\"baseMap\":{\"baseMapLayers\":[{\"id\":\"VectorTile_1970\",\"opacity\":1,\"title\":\"Light Gray Base\",\"visibility\":true,\"layerType\":\"VectorTileLayer\",\"styleUrl\":\"https://cdn.arcgis.com/sharing/rest/content/items/291da5eab3a0412593b66d384379f89f/resources/styles/root.json\"},{\"id\":\"VectorTile_7117\",\"opacity\":1,\"title\":\"Light Gray Reference\",\"visibility\":true,\"layerType\":\"VectorTileLayer\",\"styleUrl\":\"https://cdn.arcgis.com/sharing/rest/content/items/1768e8369a214dfab4e2167d5c5f2454/resources/styles/root.json\",\"isReference\":true}],\"title\":\"Light Gray Canvas\"},\"version\":\"2.26\",\"authoringApp\":\"ArcGIS for Power BI\",\"authoringAppVersion\":\"2026.1.970\",\"bookmarks\":[],\"initialState\":{\"viewpoint\":{\"targetGeometry\":{\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100},\"xmin\":-65367243.43951967,\"ymin\":1161406.6861620182,\"xmax\":-23805067.931635644,\"ymax\":17520153.731638033}}}}},\"webmapExtensions\":{\"format\":2}},\"embedCheckPassed\":false}'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "geometryCache": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"key\":\"cachedstdgeo@@world\",\"compressionMethod\":\"pako\",\"data\":\"H4sIAAAAAAAAA4tWSk7MS0xJVNJRKi0GkZl5KZlgXjaQSE8tyk3Mq1SKBQAK3dT6JwAAAA==\"}'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "mapControls": [
+        {
+          "properties": {
+            "zoomTools": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "featureInfo": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "theme": [
+        {
+          "properties": {
+            "enable": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Efficiency Country Wise'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

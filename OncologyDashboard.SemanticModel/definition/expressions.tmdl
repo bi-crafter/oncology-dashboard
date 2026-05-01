@@ -1,0 +1,11 @@
+expression 'DirectQuery to AS - Oncology_Gold_Model_N' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/Healthcare_Analytics_PROD", "Oncology_Gold_Model_N"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 0395bf51-c662-4ec2-95c6-73ffd92d94a3
+
+	annotation PBI_IncludeFutureArtifacts = True
+

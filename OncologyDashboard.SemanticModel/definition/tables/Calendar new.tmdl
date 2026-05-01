@@ -1,0 +1,24 @@
+table 'Calendar new'
+	lineageTag: f69ad452-ebe9-458c-a956-b22c5e6fb049
+	sourceLineageTag: 1eebdbca-cb2f-4930-8459-60af8d8c9c91
+
+	column Year
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: db24f958-71ac-41b4-b6de-dc8ef0741d57
+		sourceLineageTag: 7e2d9399-1c40-4e08-8e86-46af1f6a37ef
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	partition 'Calendar new' = entity
+		mode: directQuery
+		source
+			entityName: Calendar new
+			expressionSource: 'DirectQuery to AS - Oncology_Gold_Model_N'
+
+	annotation PBI_ResultType = Exception
+

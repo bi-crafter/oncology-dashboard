@@ -1,0 +1,13 @@
+relationship 8716e7ec-be83-4d97-ab7e-54e0f2cb200d
+	fromColumn: Gold_Oncology_Dashboard_Source.LinkKey
+	toColumn: Gold_Medicine_Metrics_Source.LinkKey
+
+relationship ec3db2e5-d962-4073-bbe5-18026204b4db
+	isActive: false
+	fromColumn: Calendar.Year
+	toColumn: Gold_Medicine_Metrics_Source.Year
+
+relationship 591a6241-14ce-4253-ae99-d390c1f2eb77
+	fromColumn: Gold_Oncology_Dashboard_Source.Year
+	toColumn: 'Calendar new'.Year
+

@@ -1,0 +1,35 @@
+# Auto detect text files and normalize line endings to LF
+* text=auto
+
+# JSON files
+*.json text eol=lf diff=json
+
+# TMDL files (tabular model definition language)
+*.tmdl text eol=lf
+
+# Power BI files
+*.pbip text eol=lf
+*.pbir text eol=lf
+*.pbism text eol=lf
+*.pbit text eol=lf
+
+# Documentation files
+*.md text eol=lf diff=markdown
+*.txt text eol=lf
+*.csv text eol=crlf
+
+# YAML/TOML
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+
+# Binary files
+*.pbix binary
+*.xlsx binary
+*.xls binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.db binary

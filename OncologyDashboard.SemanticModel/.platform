@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "OncologyDashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "26023566-a6af-43e8-9550-5405a1fc289b"
+  }
+}

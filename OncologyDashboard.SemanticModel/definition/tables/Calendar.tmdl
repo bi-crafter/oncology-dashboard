@@ -1,0 +1,85 @@
+table Calendar
+	lineageTag: 0f0a11e1-dc8d-4fea-a480-721abd06b79c
+	sourceLineageTag: f661d3f9-4709-45ee-94f3-e8c0476fd7e9
+
+	column Date
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 2666e836-16aa-429f-9718-b9d981a891f7
+		sourceLineageTag: e58aeb26-ce99-4ced-a7a8-9be0fb27c4d9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = User
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: e1e09945-02b0-4428-8343-9f39595aed58
+		sourceLineageTag: cd45dca9-bd11-4dea-ae28-f8b285050aa1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column Month
+		dataType: string
+		lineageTag: 82532b55-6c5f-4977-895b-1933e40f01f1
+		sourceLineageTag: 8ddd7fa7-cd29-4112-81ee-6e88a61bf0ee
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = User
+
+	column 'Month Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: 67ef8271-85af-4a7a-8631-16b38c29354a
+		sourceLineageTag: 44a1108b-39ac-4918-a034-16ef501e560f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Month Number
+
+		annotation SummarizationSetBy = User
+
+	column Quarter
+		dataType: string
+		lineageTag: 473bda24-b7a7-42ec-8119-c489c9487f33
+		sourceLineageTag: 1bfe560b-2999-4617-a8ab-64d0bd6ef813
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = User
+
+	column 'Year Month'
+		dataType: string
+		lineageTag: 797e133a-cd33-4ecf-b230-eadf0e264ec8
+		sourceLineageTag: 3ccaa7c0-32cc-4f10-bef9-b04f5d37f4d9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Year Month
+
+		annotation SummarizationSetBy = User
+
+	column 'Year Month Sort'
+		dataType: string
+		lineageTag: 32fb6bd5-ccef-49d7-9119-a560ddda0fb3
+		sourceLineageTag: 9d0df201-abe5-4ebc-b73d-e00f45b975ce
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Year Month Sort
+
+		annotation SummarizationSetBy = User
+
+	partition Calendar = entity
+		mode: directQuery
+		source
+			entityName: Calendar
+			expressionSource: 'DirectQuery to AS - Oncology_Gold_Model_N'
+
+	annotation PBI_ResultType = Exception
+

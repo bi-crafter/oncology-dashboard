@@ -1,0 +1,164 @@
+{
+    "name": "OncologyCommandCenter_FullFix",
+    "dataColors": [
+        "#00F2FF",
+        "#34C759",
+        "#FF3B30",
+        "#AF52DE",
+        "#FF9500",
+        "#007AFF",
+        "#FFD60A",
+        "#FFFFFF"
+    ],
+    "background": "#161B22",
+    "foreground": "#FFFFFF",
+    "tableAccent": "#00F2FF",
+    "visualStyles": {
+        "*": {
+            "*": {
+                "background": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#011627"
+                            }
+                        },
+                        "transparency": 0
+                    }
+                ],
+                "border": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#1A3A5A"
+                            }
+                        },
+                        "radius": 8
+                    }
+                ],
+                "title": [
+                    {
+                        "show": true,
+                        "fontFamily": "Segoe UI Semibold",
+                        "fontSize": 12,
+                        "color": {
+                            "solid": {
+                                "color": "#00F2FF"
+                            }
+                        }
+                    }
+                ],
+                "visualHeader": [
+                    {
+                        "show": false
+                    }
+                ]
+            }
+        },
+        "page": {
+            "*": {
+                "background": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#000B1A"
+                            }
+                        },
+                        "transparency": 0
+                    }
+                ]
+            }
+        },
+        "card": {
+            "*": {
+                "labels": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#5AC8FA"
+                            }
+                        },
+                        "fontSize": 10
+                    }
+                ],
+                "dataLabels": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "fontSize": 28
+                    }
+                ]
+            }
+        },
+        "categoryAxis": {
+            "*": {
+                "show": [
+                    {
+                        "value": true
+                    }
+                ],
+                "labelColor": [
+                    {
+                        "solid": {
+                            "color": "#FFFFFF"
+                        }
+                    }
+                ],
+                "fontSize": [
+                    {
+                        "value": 9
+                    }
+                ]
+            }
+        },
+        "valueAxis": {
+            "*": {
+                "show": [
+                    {
+                        "value": true
+                    }
+                ],
+                "labelColor": [
+                    {
+                        "solid": {
+                            "color": "#FFFFFF"
+                        }
+                    }
+                ],
+                "gridlineColor": [
+                    {
+                        "solid": {
+                            "color": "#1A3A5A"
+                        }
+                    }
+                ],
+                "gridlineStyle": [
+                    {
+                        "value": "dotted"
+                    }
+                ]
+            }
+        },
+        "legend": {
+            "*": {
+                "show": [
+                    {
+                        "value": true
+                    }
+                ],
+                "labelColor": [
+                    {
+                        "solid": {
+                            "color": "#FFFFFF"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

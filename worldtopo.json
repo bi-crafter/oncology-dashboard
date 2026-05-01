@@ -1,0 +1,100 @@
+{
+    "name": "OncologyModernPro",
+    "dataColors": [
+        "#007AFF",
+        "#5856D6",
+        "#FF2D55",
+        "#AF52DE",
+        "#FF9500",
+        "#34C759",
+        "#5AC8FA",
+        "#8E8E93"
+    ],
+    "background": "#F2F2F7",
+    "foreground": "#1C1C1E",
+    "tableAccent": "#007AFF",
+    "visualStyles": {
+        "*": {
+            "*": {
+                "background": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "transparency": 0
+                    }
+                ],
+                "visualHeader": [
+                    {
+                        "show": true
+                    }
+                ],
+                "outlining": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#E5E5EA"
+                            }
+                        },
+                        "weight": 1
+                    }
+                ],
+                "border": [
+                    {
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#E5E5EA"
+                            }
+                        },
+                        "radius": 12
+                    }
+                ]
+            }
+        },
+        "page": {
+            "*": {
+                "background": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#F2F2F7"
+                            }
+                        },
+                        "transparency": 0
+                    }
+                ]
+            }
+        },
+        "card": {
+            "*": {
+                "labels": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#8E8E93"
+                            }
+                        },
+                        "fontSize": 10,
+                        "fontFamily": "Segoe UI Semibold"
+                    }
+                ],
+                "dataLabels": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#1C1C1E"
+                            }
+                        },
+                        "fontSize": 24,
+                        "fontFamily": "Segoe UI Bold"
+                    }
+                ]
+            }
+        }
+    }
+}
